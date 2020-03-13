@@ -1,7 +1,5 @@
 package stack
 
-import "fmt"
-
 type Node struct {
 	value int
 	next  *Node
@@ -28,7 +26,7 @@ func (stack *Stack) Push(value int) {
 	stack.size++
 }
 
-func (stack *Stack) Size() int{
+func (stack *Stack) Size() int {
 	return stack.size
 }
 
@@ -37,8 +35,4 @@ func (stack *Stack) Peek() (*Node, bool) {
 		return &Node{}, false
 	}
 	return stack.root, true
-}
-
-func main() {
-	fmt.Println("test")
 }
